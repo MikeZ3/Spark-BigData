@@ -13,8 +13,8 @@ if __name__ == "__main__":
     sc = spark.sparkContext
 
     # Declare input and output from DFS
-    inputPath = 'hdfs://master:9000/user/bigdata/' + sys.argv[2]
-    outputPath = 'hdfs://master:9000/user/bigdata/' + sys.argv[3]
+    inputPath = 'hdfs://master:9000/user/user/' + sys.argv[2]
+    outputPath = 'hdfs://master:9000/user/user/' + sys.argv[3]
 
     threshold = int(sys.argv[1])
     # Save data to a DataFrame
