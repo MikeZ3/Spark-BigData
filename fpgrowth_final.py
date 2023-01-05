@@ -11,18 +11,20 @@ if __name__ == "__main__":
         exit(-1)
     spark = SparkSession.builder.appName('FP-Growth approach').getOrCreate()
     sc = spark.sparkContext
+
     # Declare input and output from DFS
     inputPath = 'hdfs://master:9000/user/bigdata/' + sys.argv[2]
     outputPath = 'hdfs://master:9000/user/bigdata/' + sys.argv[3]
 
     threshold = int(sys.argv[1])
-    dataFile = spark.read.text(inputPath).select(split("value", " ").alias("items"))
-    # Count total rows (transactions) are in the DataFrame
+    # Save data to a DataFrame
+    dataFile = spark.read.text(inputPath).select(split('value', ' ').alias('items'))
+    # Count total rows (transactions) that are in the DataFrame
     rows = dataFile.count()
     # Convert threshold to support
     support = float(threshold / rows)
     # Find frequent itemsets
-    fpGrowth = FPGrowth(itemsCol="items", minSupport=support)
+    fpGrowth = FPGrowth(itemsCol='items', minSupport=support)
     itemsets = fpGrowth.fit(dataFile)
     freq_itemsets = itemsets.freqItemsets
     # Transform DataFrame so it can be written to csv
