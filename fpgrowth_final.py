@@ -29,6 +29,6 @@ if __name__ == "__main__":
     freq_itemsets = itemsets.freqItemsets
     # Transform DataFrame so it can be written to csv
     freq_itemsets = freq_itemsets.withColumn('items', concat_ws(',', 'items'))
-    # Combine all result csv parts to one and write them to output path
+    # Combine all result csv parts to one and save it to the output path
     freq_itemsets.coalesce(1).write.format('csv').save(outputPath)
     sc.stop()
