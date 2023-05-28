@@ -1,0 +1,12 @@
+﻿Οι παράμετροι του συστήματος δεν τροποποιήθηκαν.
+
+Στις μεταβλητές inputPath και outputPath του κώδικα το path είναι βασισμένο στο hdfs από δικά μας vm.
+
+Για την καταγραφή των αποτελεσμάτων του Spark χρησιμοποιήσαμε την εντολή:
+~/spark/bin/spark-submit --master spark://master:7077 /home/user/Spark-BigData/fpgrowth_final.py 50000 data output>t50000_1worker_results1.txt
+
+Για την απενεργοποίηση του worker χρησιμοποιήσαμε την εντολή (στον worker):
+~/spark/sbin/stop-worker.sh
+
+Και για την ενεργοποίησή του, την εντολή:
+~/spark/sbin/start-worker.sh spark://83.212.80.243:7077

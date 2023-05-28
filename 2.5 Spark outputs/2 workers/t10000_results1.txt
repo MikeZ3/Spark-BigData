@@ -1,0 +1,520 @@
+23/01/06 16:44:52 INFO SparkContext: Running Spark version 3.3.1
+23/01/06 16:44:52 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/01/06 16:44:52 INFO ResourceUtils: ==============================================================
+23/01/06 16:44:52 INFO ResourceUtils: No custom resources configured for spark.driver.
+23/01/06 16:44:52 INFO ResourceUtils: ==============================================================
+23/01/06 16:44:52 INFO SparkContext: Submitted application: FP-Growth approach
+23/01/06 16:44:52 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+23/01/06 16:44:52 INFO ResourceProfile: Limiting resource is cpu
+23/01/06 16:44:52 INFO ResourceProfileManager: Added ResourceProfile id: 0
+23/01/06 16:44:52 INFO SecurityManager: Changing view acls to: user
+23/01/06 16:44:52 INFO SecurityManager: Changing modify acls to: user
+23/01/06 16:44:52 INFO SecurityManager: Changing view acls groups to: 
+23/01/06 16:44:52 INFO SecurityManager: Changing modify acls groups to: 
+23/01/06 16:44:52 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(user); groups with view permissions: Set(); users  with modify permissions: Set(user); groups with modify permissions: Set()
+23/01/06 16:44:52 INFO Utils: Successfully started service 'sparkDriver' on port 35025.
+23/01/06 16:44:52 INFO SparkEnv: Registering MapOutputTracker
+23/01/06 16:44:52 INFO SparkEnv: Registering BlockManagerMaster
+23/01/06 16:44:52 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+23/01/06 16:44:52 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+23/01/06 16:44:52 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+23/01/06 16:44:52 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-1d1312ed-510c-4696-add2-364a5e7abec5
+23/01/06 16:44:53 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+23/01/06 16:44:53 INFO SparkEnv: Registering OutputCommitCoordinator
+23/01/06 16:44:53 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+23/01/06 16:44:53 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://master:7077...
+23/01/06 16:44:53 INFO TransportClientFactory: Successfully created connection to master/83.212.80.243:7077 after 33 ms (0 ms spent in bootstraps)
+23/01/06 16:44:53 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20230106164453-0004
+23/01/06 16:44:53 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20230106164453-0004/0 on worker-20230106152137-83.212.80.243-35045 (83.212.80.243:35045) with 8 core(s)
+23/01/06 16:44:53 INFO StandaloneSchedulerBackend: Granted executor ID app-20230106164453-0004/0 on hostPort 83.212.80.243:35045 with 8 core(s), 1024.0 MiB RAM
+23/01/06 16:44:53 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34483.
+23/01/06 16:44:53 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20230106164453-0004/1 on worker-20230106152138-83.212.81.9-35867 (83.212.81.9:35867) with 8 core(s)
+23/01/06 16:44:53 INFO NettyBlockTransferService: Server created on master:34483
+23/01/06 16:44:53 INFO StandaloneSchedulerBackend: Granted executor ID app-20230106164453-0004/1 on hostPort 83.212.81.9:35867 with 8 core(s), 1024.0 MiB RAM
+23/01/06 16:44:53 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+23/01/06 16:44:53 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, master, 34483, None)
+23/01/06 16:44:53 INFO BlockManagerMasterEndpoint: Registering block manager master:34483 with 434.4 MiB RAM, BlockManagerId(driver, master, 34483, None)
+23/01/06 16:44:53 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, master, 34483, None)
+23/01/06 16:44:53 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, master, 34483, None)
+23/01/06 16:44:53 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20230106164453-0004/0 is now RUNNING
+23/01/06 16:44:53 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20230106164453-0004/1 is now RUNNING
+23/01/06 16:44:53 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+23/01/06 16:44:54 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+23/01/06 16:44:54 INFO SharedState: Warehouse path is 'file:/home/user/spark-warehouse'.
+23/01/06 16:44:55 INFO InMemoryFileIndex: It took 130 ms to list leaf files for 1 paths.
+23/01/06 16:44:56 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (83.212.80.243:55308) with ID 0,  ResourceProfileId 0
+23/01/06 16:44:56 INFO BlockManagerMasterEndpoint: Registering block manager 83.212.80.243:37105 with 434.4 MiB RAM, BlockManagerId(0, 83.212.80.243, 37105, None)
+23/01/06 16:44:58 INFO FileSourceStrategy: Pushed Filters: 
+23/01/06 16:44:58 INFO FileSourceStrategy: Post-Scan Filters: 
+23/01/06 16:44:58 INFO FileSourceStrategy: Output Data Schema: struct<>
+23/01/06 16:44:58 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (83.212.81.9:33004) with ID 1,  ResourceProfileId 0
+23/01/06 16:44:58 INFO BlockManagerMasterEndpoint: Registering block manager 83.212.81.9:36005 with 434.4 MiB RAM, BlockManagerId(1, 83.212.81.9, 36005, None)
+23/01/06 16:44:58 INFO CodeGenerator: Code generated in 148.744597 ms
+23/01/06 16:44:59 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 199.1 KiB, free 434.2 MiB)
+23/01/06 16:44:59 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 33.9 KiB, free 434.2 MiB)
+23/01/06 16:44:59 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on master:34483 (size: 33.9 KiB, free: 434.4 MiB)
+23/01/06 16:44:59 INFO SparkContext: Created broadcast 0 from count at NativeMethodAccessorImpl.java:0
+23/01/06 16:44:59 INFO FileSourceScanExec: Planning scan with bin packing, max size: 32689881 bytes, open cost is considered as scanning 4194304 bytes.
+23/01/06 16:44:59 INFO DAGScheduler: Registering RDD 3 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+23/01/06 16:44:59 INFO DAGScheduler: Got map stage job 0 (count at NativeMethodAccessorImpl.java:0) with 19 output partitions
+23/01/06 16:44:59 INFO DAGScheduler: Final stage: ShuffleMapStage 0 (count at NativeMethodAccessorImpl.java:0)
+23/01/06 16:44:59 INFO DAGScheduler: Parents of final stage: List()
+23/01/06 16:44:59 INFO DAGScheduler: Missing parents: List()
+23/01/06 16:44:59 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+23/01/06 16:44:59 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 14.0 KiB, free 434.2 MiB)
+23/01/06 16:44:59 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 7.0 KiB, free 434.2 MiB)
+23/01/06 16:44:59 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on master:34483 (size: 7.0 KiB, free: 434.4 MiB)
+23/01/06 16:44:59 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+23/01/06 16:44:59 INFO DAGScheduler: Submitting 19 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/01/06 16:44:59 INFO TaskSchedulerImpl: Adding task set 0.0 with 19 tasks resource profile 0
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (83.212.80.243, executor 0, partition 0, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (83.212.81.9, executor 1, partition 1, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (83.212.80.243, executor 0, partition 2, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (83.212.81.9, executor 1, partition 3, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (83.212.80.243, executor 0, partition 4, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (83.212.81.9, executor 1, partition 5, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (83.212.80.243, executor 0, partition 6, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (83.212.81.9, executor 1, partition 7, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8) (83.212.80.243, executor 0, partition 8, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9) (83.212.81.9, executor 1, partition 9, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10) (83.212.80.243, executor 0, partition 10, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11) (83.212.81.9, executor 1, partition 11, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12) (83.212.80.243, executor 0, partition 12, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13) (83.212.81.9, executor 1, partition 13, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14) (83.212.80.243, executor 0, partition 14, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15) (83.212.81.9, executor 1, partition 15, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:44:59 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 83.212.80.243:37105 (size: 7.0 KiB, free: 434.4 MiB)
+23/01/06 16:45:00 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 83.212.81.9:36005 (size: 7.0 KiB, free: 434.4 MiB)
+23/01/06 16:45:00 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 83.212.80.243:37105 (size: 33.9 KiB, free: 434.4 MiB)
+23/01/06 16:45:01 INFO TaskSetManager: Starting task 16.0 in stage 0.0 (TID 16) (83.212.80.243, executor 0, partition 16, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:45:01 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 2533 ms on 83.212.80.243 (executor 0) (1/19)
+23/01/06 16:45:02 INFO TaskSetManager: Starting task 17.0 in stage 0.0 (TID 17) (83.212.80.243, executor 0, partition 17, ANY, 5094 bytes) taskResourceAssignments Map()
+23/01/06 16:45:02 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 2550 ms on 83.212.80.243 (executor 0) (2/19)
+23/01/06 16:45:02 INFO TaskSetManager: Starting task 18.0 in stage 0.0 (TID 18) (83.212.80.243, executor 0, partition 18, ANY, 5002 bytes) taskResourceAssignments Map()
+23/01/06 16:45:02 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 2563 ms on 83.212.80.243 (executor 0) (3/19)
+23/01/06 16:45:02 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 2569 ms on 83.212.80.243 (executor 0) (4/19)
+23/01/06 16:45:02 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 2685 ms on 83.212.80.243 (executor 0) (5/19)
+23/01/06 16:45:02 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 2713 ms on 83.212.80.243 (executor 0) (6/19)
+23/01/06 16:45:02 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 2726 ms on 83.212.80.243 (executor 0) (7/19)
+23/01/06 16:45:02 INFO TaskSetManager: Finished task 18.0 in stage 0.0 (TID 18) in 190 ms on 83.212.80.243 (executor 0) (8/19)
+23/01/06 16:45:02 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2855 ms on 83.212.80.243 (executor 0) (9/19)
+23/01/06 16:45:02 INFO TaskSetManager: Finished task 16.0 in stage 0.0 (TID 16) in 330 ms on 83.212.80.243 (executor 0) (10/19)
+23/01/06 16:45:02 INFO TaskSetManager: Finished task 17.0 in stage 0.0 (TID 17) in 334 ms on 83.212.80.243 (executor 0) (11/19)
+23/01/06 16:45:04 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 83.212.81.9:36005 (size: 33.9 KiB, free: 434.4 MiB)
+23/01/06 16:45:07 INFO TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 8225 ms on 83.212.81.9 (executor 1) (12/19)
+23/01/06 16:45:07 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 8231 ms on 83.212.81.9 (executor 1) (13/19)
+23/01/06 16:45:07 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 8521 ms on 83.212.81.9 (executor 1) (14/19)
+23/01/06 16:45:08 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 8609 ms on 83.212.81.9 (executor 1) (15/19)
+23/01/06 16:45:08 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 8605 ms on 83.212.81.9 (executor 1) (16/19)
+23/01/06 16:45:08 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 8777 ms on 83.212.81.9 (executor 1) (17/19)
+23/01/06 16:45:08 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 8815 ms on 83.212.81.9 (executor 1) (18/19)
+23/01/06 16:45:08 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 8877 ms on 83.212.81.9 (executor 1) (19/19)
+23/01/06 16:45:08 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+23/01/06 16:45:08 INFO DAGScheduler: ShuffleMapStage 0 (count at NativeMethodAccessorImpl.java:0) finished in 9.027 s
+23/01/06 16:45:08 INFO DAGScheduler: looking for newly runnable stages
+23/01/06 16:45:08 INFO DAGScheduler: running: Set()
+23/01/06 16:45:08 INFO DAGScheduler: waiting: Set()
+23/01/06 16:45:08 INFO DAGScheduler: failed: Set()
+23/01/06 16:45:08 INFO CodeGenerator: Code generated in 17.127706 ms
+23/01/06 16:45:08 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+23/01/06 16:45:08 INFO DAGScheduler: Got job 1 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+23/01/06 16:45:08 INFO DAGScheduler: Final stage: ResultStage 2 (count at NativeMethodAccessorImpl.java:0)
+23/01/06 16:45:08 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+23/01/06 16:45:08 INFO DAGScheduler: Missing parents: List()
+23/01/06 16:45:08 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[6] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+23/01/06 16:45:08 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 11.1 KiB, free 434.1 MiB)
+23/01/06 16:45:08 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 5.5 KiB, free 434.1 MiB)
+23/01/06 16:45:08 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on master:34483 (size: 5.5 KiB, free: 434.4 MiB)
+23/01/06 16:45:08 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1513
+23/01/06 16:45:08 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[6] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+23/01/06 16:45:08 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+23/01/06 16:45:08 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 19) (83.212.81.9, executor 1, partition 0, NODE_LOCAL, 4457 bytes) taskResourceAssignments Map()
+23/01/06 16:45:08 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 83.212.81.9:36005 (size: 5.5 KiB, free: 434.4 MiB)
+23/01/06 16:45:08 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 83.212.81.9:33004
+23/01/06 16:45:08 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 19) in 384 ms on 83.212.81.9 (executor 1) (1/1)
+23/01/06 16:45:08 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+23/01/06 16:45:08 INFO DAGScheduler: ResultStage 2 (count at NativeMethodAccessorImpl.java:0) finished in 0.398 s
+23/01/06 16:45:08 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+23/01/06 16:45:08 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+23/01/06 16:45:08 INFO DAGScheduler: Job 1 finished: count at NativeMethodAccessorImpl.java:0, took 0.415285 s
+23/01/06 16:45:08 INFO Instrumentation: [a0f8d2ab] Stage class: FPGrowth
+23/01/06 16:45:08 INFO Instrumentation: [a0f8d2ab] Stage uid: FPGrowth_1eebfc17bda7
+23/01/06 16:45:08 INFO FileSourceStrategy: Pushed Filters: 
+23/01/06 16:45:08 INFO FileSourceStrategy: Post-Scan Filters: 
+23/01/06 16:45:08 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+23/01/06 16:45:09 INFO CodeGenerator: Code generated in 21.486151 ms
+23/01/06 16:45:09 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 199.1 KiB, free 433.9 MiB)
+23/01/06 16:45:09 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 33.9 KiB, free 433.9 MiB)
+23/01/06 16:45:09 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on master:34483 (size: 33.9 KiB, free: 434.3 MiB)
+23/01/06 16:45:09 INFO SparkContext: Created broadcast 3 from rdd at Instrumentation.scala:62
+23/01/06 16:45:09 INFO FileSourceScanExec: Planning scan with bin packing, max size: 32689881 bytes, open cost is considered as scanning 4194304 bytes.
+23/01/06 16:45:09 INFO Instrumentation: [a0f8d2ab] training: numPartitions=19 storageLevel=StorageLevel(1 replicas)
+23/01/06 16:45:09 INFO Instrumentation: [a0f8d2ab] {"itemsCol":"items","minSupport":5.738070508377554E-4}
+23/01/06 16:45:09 INFO FileSourceStrategy: Pushed Filters: IsNotNull(value)
+23/01/06 16:45:09 INFO FileSourceStrategy: Post-Scan Filters: isnotnull(value#0),isnotnull(split(value#0,  , -1))
+23/01/06 16:45:09 INFO FileSourceStrategy: Output Data Schema: struct<value: string>
+23/01/06 16:45:09 INFO CodeGenerator: Code generated in 15.999697 ms
+23/01/06 16:45:09 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 199.1 KiB, free 433.7 MiB)
+23/01/06 16:45:09 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 33.9 KiB, free 433.7 MiB)
+23/01/06 16:45:09 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on master:34483 (size: 33.9 KiB, free: 434.3 MiB)
+23/01/06 16:45:09 INFO SparkContext: Created broadcast 4 from rdd at FPGrowth.scala:169
+23/01/06 16:45:09 INFO FileSourceScanExec: Planning scan with bin packing, max size: 32689881 bytes, open cost is considered as scanning 4194304 bytes.
+23/01/06 16:45:09 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 83.212.80.243:37105 in memory (size: 7.0 KiB, free: 434.4 MiB)
+23/01/06 16:45:09 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 83.212.81.9:36005 in memory (size: 7.0 KiB, free: 434.4 MiB)
+23/01/06 16:45:09 INFO SparkContext: Starting job: count at FPGrowth.scala:178
+23/01/06 16:45:09 INFO DAGScheduler: Got job 2 (count at FPGrowth.scala:178) with 19 output partitions
+23/01/06 16:45:09 INFO DAGScheduler: Final stage: ResultStage 3 (count at FPGrowth.scala:178)
+23/01/06 16:45:09 INFO DAGScheduler: Parents of final stage: List()
+23/01/06 16:45:09 INFO DAGScheduler: Missing parents: List()
+23/01/06 16:45:09 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[19] at map at FPGrowth.scala:169), which has no missing parents
+23/01/06 16:45:09 INFO BlockManagerInfo: Removed broadcast_1_piece0 on master:34483 in memory (size: 7.0 KiB, free: 434.3 MiB)
+23/01/06 16:45:09 INFO BlockManagerInfo: Removed broadcast_2_piece0 on master:34483 in memory (size: 5.5 KiB, free: 434.3 MiB)
+23/01/06 16:45:09 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 83.212.81.9:36005 in memory (size: 5.5 KiB, free: 434.4 MiB)
+23/01/06 16:45:09 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 83.212.81.9:36005 in memory (size: 33.9 KiB, free: 434.4 MiB)
+23/01/06 16:45:09 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 83.212.80.243:37105 in memory (size: 33.9 KiB, free: 434.4 MiB)
+23/01/06 16:45:09 INFO BlockManagerInfo: Removed broadcast_0_piece0 on master:34483 in memory (size: 33.9 KiB, free: 434.3 MiB)
+23/01/06 16:45:09 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 29.3 KiB, free 433.9 MiB)
+23/01/06 16:45:09 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 13.3 KiB, free 433.9 MiB)
+23/01/06 16:45:09 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on master:34483 (size: 13.3 KiB, free: 434.3 MiB)
+23/01/06 16:45:09 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1513
+23/01/06 16:45:09 INFO DAGScheduler: Submitting 19 missing tasks from ResultStage 3 (MapPartitionsRDD[19] at map at FPGrowth.scala:169) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/01/06 16:45:09 INFO TaskSchedulerImpl: Adding task set 3.0 with 19 tasks resource profile 0
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 20) (83.212.80.243, executor 0, partition 0, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 21) (83.212.81.9, executor 1, partition 1, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 2.0 in stage 3.0 (TID 22) (83.212.80.243, executor 0, partition 2, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 3.0 in stage 3.0 (TID 23) (83.212.81.9, executor 1, partition 3, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 4.0 in stage 3.0 (TID 24) (83.212.80.243, executor 0, partition 4, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 5.0 in stage 3.0 (TID 25) (83.212.81.9, executor 1, partition 5, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 6.0 in stage 3.0 (TID 26) (83.212.80.243, executor 0, partition 6, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 7.0 in stage 3.0 (TID 27) (83.212.81.9, executor 1, partition 7, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 8.0 in stage 3.0 (TID 28) (83.212.80.243, executor 0, partition 8, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 9.0 in stage 3.0 (TID 29) (83.212.81.9, executor 1, partition 9, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 10.0 in stage 3.0 (TID 30) (83.212.80.243, executor 0, partition 10, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 11.0 in stage 3.0 (TID 31) (83.212.81.9, executor 1, partition 11, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 12.0 in stage 3.0 (TID 32) (83.212.80.243, executor 0, partition 12, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 13.0 in stage 3.0 (TID 33) (83.212.81.9, executor 1, partition 13, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 14.0 in stage 3.0 (TID 34) (83.212.80.243, executor 0, partition 14, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO TaskSetManager: Starting task 15.0 in stage 3.0 (TID 35) (83.212.81.9, executor 1, partition 15, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:09 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 83.212.80.243:37105 (size: 13.3 KiB, free: 434.4 MiB)
+23/01/06 16:45:09 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 83.212.81.9:36005 (size: 13.3 KiB, free: 434.4 MiB)
+23/01/06 16:45:11 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 83.212.80.243:37105 (size: 33.9 KiB, free: 434.4 MiB)
+23/01/06 16:45:12 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 83.212.81.9:36005 (size: 33.9 KiB, free: 434.4 MiB)
+23/01/06 16:45:16 INFO BlockManagerInfo: Added rdd_19_14 on disk on 83.212.80.243:37105 (size: 15.0 MiB)
+23/01/06 16:45:17 INFO BlockManagerInfo: Added rdd_19_2 in memory on 83.212.80.243:37105 (size: 337.8 MiB, free: 96.6 MiB)
+23/01/06 16:45:17 INFO TaskSetManager: Starting task 16.0 in stage 3.0 (TID 36) (83.212.80.243, executor 0, partition 16, ANY, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:45:17 INFO TaskSetManager: Finished task 2.0 in stage 3.0 (TID 22) in 7988 ms on 83.212.80.243 (executor 0) (1/19)
+23/01/06 16:45:17 INFO BlockManagerInfo: Added rdd_19_12 on disk on 83.212.80.243:37105 (size: 17.5 MiB)
+23/01/06 16:45:17 INFO BlockManagerInfo: Added rdd_19_10 on disk on 83.212.80.243:37105 (size: 17.5 MiB)
+23/01/06 16:45:18 INFO BlockManagerInfo: Added rdd_19_8 on disk on 83.212.80.243:37105 (size: 17.5 MiB)
+23/01/06 16:45:19 INFO TaskSetManager: Starting task 17.0 in stage 3.0 (TID 37) (83.212.80.243, executor 0, partition 17, ANY, 5105 bytes) taskResourceAssignments Map()
+23/01/06 16:45:19 INFO TaskSetManager: Finished task 14.0 in stage 3.0 (TID 34) in 9581 ms on 83.212.80.243 (executor 0) (2/19)
+23/01/06 16:45:19 INFO BlockManagerInfo: Added rdd_19_6 on disk on 83.212.80.243:37105 (size: 21.8 MiB)
+23/01/06 16:45:19 INFO BlockManagerInfo: Added rdd_19_4 on disk on 83.212.80.243:37105 (size: 21.8 MiB)
+23/01/06 16:45:20 INFO TaskSetManager: Starting task 18.0 in stage 3.0 (TID 38) (83.212.80.243, executor 0, partition 18, ANY, 5013 bytes) taskResourceAssignments Map()
+23/01/06 16:45:20 INFO TaskSetManager: Finished task 12.0 in stage 3.0 (TID 32) in 10780 ms on 83.212.80.243 (executor 0) (3/19)
+23/01/06 16:45:20 INFO TaskSetManager: Finished task 10.0 in stage 3.0 (TID 30) in 11185 ms on 83.212.80.243 (executor 0) (4/19)
+23/01/06 16:45:20 INFO TaskSetManager: Finished task 8.0 in stage 3.0 (TID 28) in 11268 ms on 83.212.80.243 (executor 0) (5/19)
+23/01/06 16:45:20 INFO BlockManagerInfo: Added rdd_19_0 on disk on 83.212.80.243:37105 (size: 27.2 MiB)
+23/01/06 16:45:21 INFO BlockManagerInfo: Added rdd_19_18 in memory on 83.212.80.243:37105 (size: 39.9 MiB, free: 56.7 MiB)
+23/01/06 16:45:21 INFO TaskSetManager: Finished task 18.0 in stage 3.0 (TID 38) in 883 ms on 83.212.80.243 (executor 0) (6/19)
+23/01/06 16:45:21 INFO TaskSetManager: Finished task 6.0 in stage 3.0 (TID 26) in 12039 ms on 83.212.80.243 (executor 0) (7/19)
+23/01/06 16:45:21 INFO TaskSetManager: Finished task 4.0 in stage 3.0 (TID 24) in 12139 ms on 83.212.80.243 (executor 0) (8/19)
+23/01/06 16:45:22 INFO BlockManagerInfo: Added rdd_19_16 on disk on 83.212.80.243:37105 (size: 14.5 MiB)
+23/01/06 16:45:22 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 20) in 13214 ms on 83.212.80.243 (executor 0) (9/19)
+23/01/06 16:45:23 INFO TaskSetManager: Finished task 16.0 in stage 3.0 (TID 36) in 5769 ms on 83.212.80.243 (executor 0) (10/19)
+23/01/06 16:45:23 INFO BlockManagerInfo: Added rdd_19_17 on disk on 83.212.80.243:37105 (size: 19.0 MiB)
+23/01/06 16:45:24 INFO TaskSetManager: Finished task 17.0 in stage 3.0 (TID 37) in 5715 ms on 83.212.80.243 (executor 0) (11/19)
+23/01/06 16:45:43 INFO BlockManagerInfo: Added rdd_19_9 on disk on 83.212.81.9:36005 (size: 17.5 MiB)
+23/01/06 16:45:49 INFO BlockManagerInfo: Added rdd_19_11 on disk on 83.212.81.9:36005 (size: 17.5 MiB)
+23/01/06 16:45:55 INFO BlockManagerInfo: Added rdd_19_15 on disk on 83.212.81.9:36005 (size: 14.5 MiB)
+23/01/06 16:45:59 INFO BlockManagerInfo: Added rdd_19_13 on disk on 83.212.81.9:36005 (size: 17.5 MiB)
+23/01/06 16:46:02 INFO TaskSetManager: Finished task 9.0 in stage 3.0 (TID 29) in 53155 ms on 83.212.81.9 (executor 1) (12/19)
+23/01/06 16:46:04 INFO BlockManagerInfo: Added rdd_19_5 on disk on 83.212.81.9:36005 (size: 21.8 MiB)
+23/01/06 16:46:08 INFO TaskSetManager: Finished task 15.0 in stage 3.0 (TID 35) in 58745 ms on 83.212.81.9 (executor 1) (13/19)
+23/01/06 16:46:08 INFO BlockManagerInfo: Added rdd_19_7 on disk on 83.212.81.9:36005 (size: 21.8 MiB)
+23/01/06 16:46:09 INFO BlockManagerInfo: Added rdd_19_3 on disk on 83.212.81.9:36005 (size: 27.1 MiB)
+23/01/06 16:46:10 INFO TaskSetManager: Finished task 11.0 in stage 3.0 (TID 31) in 60946 ms on 83.212.81.9 (executor 1) (14/19)
+23/01/06 16:46:13 INFO TaskSetManager: Finished task 13.0 in stage 3.0 (TID 33) in 64289 ms on 83.212.81.9 (executor 1) (15/19)
+23/01/06 16:46:13 INFO BlockManagerInfo: Added rdd_19_1 on disk on 83.212.81.9:36005 (size: 27.1 MiB)
+23/01/06 16:46:15 INFO BlockManagerInfo: Updated broadcast_5_piece0 on disk on 83.212.81.9:36005 (current size: 13.3 KiB, original size: 0.0 B)
+23/01/06 16:46:17 INFO BlockManagerInfo: Updated broadcast_4_piece0 on disk on 83.212.81.9:36005 (current size: 33.9 KiB, original size: 0.0 B)
+23/01/06 16:46:20 INFO TaskSetManager: Finished task 5.0 in stage 3.0 (TID 25) in 71320 ms on 83.212.81.9 (executor 1) (16/19)
+23/01/06 16:46:21 INFO TaskSetManager: Finished task 3.0 in stage 3.0 (TID 23) in 72138 ms on 83.212.81.9 (executor 1) (17/19)
+23/01/06 16:46:24 INFO TaskSetManager: Finished task 7.0 in stage 3.0 (TID 27) in 75477 ms on 83.212.81.9 (executor 1) (18/19)
+23/01/06 16:46:25 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 21) in 75993 ms on 83.212.81.9 (executor 1) (19/19)
+23/01/06 16:46:25 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+23/01/06 16:46:25 INFO DAGScheduler: ResultStage 3 (count at FPGrowth.scala:178) finished in 76.076 s
+23/01/06 16:46:25 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+23/01/06 16:46:25 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+23/01/06 16:46:25 INFO DAGScheduler: Job 2 finished: count at FPGrowth.scala:178, took 76.090488 s
+23/01/06 16:46:25 INFO Instrumentation: [a0f8d2ab] {"numExamples":17427461}
+23/01/06 16:46:25 INFO SparkContext: Starting job: count at FPGrowth.scala:215
+23/01/06 16:46:25 INFO DAGScheduler: Got job 3 (count at FPGrowth.scala:215) with 19 output partitions
+23/01/06 16:46:25 INFO DAGScheduler: Final stage: ResultStage 4 (count at FPGrowth.scala:215)
+23/01/06 16:46:25 INFO DAGScheduler: Parents of final stage: List()
+23/01/06 16:46:25 INFO DAGScheduler: Missing parents: List()
+23/01/06 16:46:25 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[19] at map at FPGrowth.scala:169), which has no missing parents
+23/01/06 16:46:25 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 29.3 KiB, free 433.9 MiB)
+23/01/06 16:46:25 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 13.3 KiB, free 433.9 MiB)
+23/01/06 16:46:25 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on master:34483 (size: 13.3 KiB, free: 434.3 MiB)
+23/01/06 16:46:25 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1513
+23/01/06 16:46:25 INFO DAGScheduler: Submitting 19 missing tasks from ResultStage 4 (MapPartitionsRDD[19] at map at FPGrowth.scala:169) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/01/06 16:46:25 INFO TaskSchedulerImpl: Adding task set 4.0 with 19 tasks resource profile 0
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 39) (83.212.80.243, executor 0, partition 0, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 40) (83.212.81.9, executor 1, partition 1, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 2.0 in stage 4.0 (TID 41) (83.212.80.243, executor 0, partition 2, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 3.0 in stage 4.0 (TID 42) (83.212.81.9, executor 1, partition 3, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 4.0 in stage 4.0 (TID 43) (83.212.80.243, executor 0, partition 4, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 5.0 in stage 4.0 (TID 44) (83.212.81.9, executor 1, partition 5, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 6.0 in stage 4.0 (TID 45) (83.212.80.243, executor 0, partition 6, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 7.0 in stage 4.0 (TID 46) (83.212.81.9, executor 1, partition 7, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 8.0 in stage 4.0 (TID 47) (83.212.80.243, executor 0, partition 8, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 9.0 in stage 4.0 (TID 48) (83.212.81.9, executor 1, partition 9, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 10.0 in stage 4.0 (TID 49) (83.212.80.243, executor 0, partition 10, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 11.0 in stage 4.0 (TID 50) (83.212.81.9, executor 1, partition 11, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 12.0 in stage 4.0 (TID 51) (83.212.80.243, executor 0, partition 12, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 13.0 in stage 4.0 (TID 52) (83.212.81.9, executor 1, partition 13, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 14.0 in stage 4.0 (TID 53) (83.212.80.243, executor 0, partition 14, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 15.0 in stage 4.0 (TID 54) (83.212.81.9, executor 1, partition 15, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 83.212.80.243:37105 (size: 13.3 KiB, free: 56.7 MiB)
+23/01/06 16:46:25 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 83.212.81.9:36005 (size: 13.3 KiB, free: 434.4 MiB)
+23/01/06 16:46:25 INFO TaskSetManager: Starting task 16.0 in stage 4.0 (TID 55) (83.212.80.243, executor 0, partition 16, PROCESS_LOCAL, 4921 bytes) taskResourceAssignments Map()
+23/01/06 16:46:25 INFO TaskSetManager: Finished task 2.0 in stage 4.0 (TID 41) in 170 ms on 83.212.80.243 (executor 0) (1/19)
+23/01/06 16:46:25 INFO TaskSetManager: Finished task 9.0 in stage 4.0 (TID 48) in 485 ms on 83.212.81.9 (executor 1) (2/19)
+23/01/06 16:46:26 INFO BlockManagerInfo: Updated broadcast_5_piece0 on disk on 83.212.80.243:37105 (current size: 13.3 KiB, original size: 0.0 B)
+23/01/06 16:46:26 INFO BlockManagerInfo: Updated broadcast_4_piece0 on disk on 83.212.80.243:37105 (current size: 33.9 KiB, original size: 0.0 B)
+23/01/06 16:46:27 INFO TaskSetManager: Starting task 17.0 in stage 4.0 (TID 56) (83.212.80.243, executor 0, partition 17, PROCESS_LOCAL, 5105 bytes) taskResourceAssignments Map()
+23/01/06 16:46:27 INFO TaskSetManager: Finished task 8.0 in stage 4.0 (TID 47) in 1828 ms on 83.212.80.243 (executor 0) (3/19)
+23/01/06 16:46:27 INFO TaskSetManager: Starting task 18.0 in stage 4.0 (TID 57) (83.212.80.243, executor 0, partition 18, PROCESS_LOCAL, 5013 bytes) taskResourceAssignments Map()
+23/01/06 16:46:27 INFO TaskSetManager: Finished task 16.0 in stage 4.0 (TID 55) in 1677 ms on 83.212.80.243 (executor 0) (4/19)
+23/01/06 16:46:27 INFO TaskSetManager: Finished task 18.0 in stage 4.0 (TID 57) in 26 ms on 83.212.80.243 (executor 0) (5/19)
+23/01/06 16:46:27 INFO TaskSetManager: Finished task 14.0 in stage 4.0 (TID 53) in 1934 ms on 83.212.80.243 (executor 0) (6/19)
+23/01/06 16:46:27 INFO TaskSetManager: Finished task 10.0 in stage 4.0 (TID 49) in 2062 ms on 83.212.80.243 (executor 0) (7/19)
+23/01/06 16:46:27 INFO TaskSetManager: Finished task 12.0 in stage 4.0 (TID 51) in 2154 ms on 83.212.80.243 (executor 0) (8/19)
+23/01/06 16:46:27 INFO TaskSetManager: Finished task 6.0 in stage 4.0 (TID 45) in 2432 ms on 83.212.80.243 (executor 0) (9/19)
+23/01/06 16:46:27 INFO TaskSetManager: Finished task 4.0 in stage 4.0 (TID 43) in 2437 ms on 83.212.80.243 (executor 0) (10/19)
+23/01/06 16:46:28 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 39) in 2768 ms on 83.212.80.243 (executor 0) (11/19)
+23/01/06 16:46:28 INFO TaskSetManager: Finished task 17.0 in stage 4.0 (TID 56) in 1332 ms on 83.212.80.243 (executor 0) (12/19)
+23/01/06 16:46:37 INFO TaskSetManager: Finished task 11.0 in stage 4.0 (TID 50) in 12325 ms on 83.212.81.9 (executor 1) (13/19)
+23/01/06 16:46:38 INFO TaskSetManager: Finished task 13.0 in stage 4.0 (TID 52) in 12684 ms on 83.212.81.9 (executor 1) (14/19)
+23/01/06 16:46:38 INFO TaskSetManager: Finished task 15.0 in stage 4.0 (TID 54) in 13355 ms on 83.212.81.9 (executor 1) (15/19)
+23/01/06 16:46:38 INFO TaskSetManager: Finished task 7.0 in stage 4.0 (TID 46) in 13532 ms on 83.212.81.9 (executor 1) (16/19)
+23/01/06 16:46:40 INFO TaskSetManager: Finished task 5.0 in stage 4.0 (TID 44) in 15203 ms on 83.212.81.9 (executor 1) (17/19)
+23/01/06 16:46:40 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 40) in 15402 ms on 83.212.81.9 (executor 1) (18/19)
+23/01/06 16:46:40 INFO TaskSetManager: Finished task 3.0 in stage 4.0 (TID 42) in 15406 ms on 83.212.81.9 (executor 1) (19/19)
+23/01/06 16:46:40 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+23/01/06 16:46:40 INFO DAGScheduler: ResultStage 4 (count at FPGrowth.scala:215) finished in 15.422 s
+23/01/06 16:46:40 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+23/01/06 16:46:40 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+23/01/06 16:46:40 INFO DAGScheduler: Job 3 finished: count at FPGrowth.scala:215, took 15.428191 s
+23/01/06 16:46:40 INFO SparkContext: Starting job: collect at FPGrowth.scala:254
+23/01/06 16:46:40 INFO DAGScheduler: Registering RDD 21 (map at FPGrowth.scala:252) as input to shuffle 1
+23/01/06 16:46:40 INFO DAGScheduler: Got job 4 (collect at FPGrowth.scala:254) with 19 output partitions
+23/01/06 16:46:40 INFO DAGScheduler: Final stage: ResultStage 6 (collect at FPGrowth.scala:254)
+23/01/06 16:46:40 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 5)
+23/01/06 16:46:40 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 5)
+23/01/06 16:46:40 INFO DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[21] at map at FPGrowth.scala:252), which has no missing parents
+23/01/06 16:46:40 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 31.3 KiB, free 433.8 MiB)
+23/01/06 16:46:40 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 14.2 KiB, free 433.8 MiB)
+23/01/06 16:46:40 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on master:34483 (size: 14.2 KiB, free: 434.3 MiB)
+23/01/06 16:46:40 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1513
+23/01/06 16:46:40 INFO DAGScheduler: Submitting 19 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[21] at map at FPGrowth.scala:252) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/01/06 16:46:40 INFO TaskSchedulerImpl: Adding task set 5.0 with 19 tasks resource profile 0
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 58) (83.212.81.9, executor 1, partition 1, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 59) (83.212.80.243, executor 0, partition 0, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 3.0 in stage 5.0 (TID 60) (83.212.81.9, executor 1, partition 3, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 2.0 in stage 5.0 (TID 61) (83.212.80.243, executor 0, partition 2, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 5.0 in stage 5.0 (TID 62) (83.212.81.9, executor 1, partition 5, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 4.0 in stage 5.0 (TID 63) (83.212.80.243, executor 0, partition 4, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 7.0 in stage 5.0 (TID 64) (83.212.81.9, executor 1, partition 7, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 6.0 in stage 5.0 (TID 65) (83.212.80.243, executor 0, partition 6, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 9.0 in stage 5.0 (TID 66) (83.212.81.9, executor 1, partition 9, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 8.0 in stage 5.0 (TID 67) (83.212.80.243, executor 0, partition 8, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 11.0 in stage 5.0 (TID 68) (83.212.81.9, executor 1, partition 11, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 10.0 in stage 5.0 (TID 69) (83.212.80.243, executor 0, partition 10, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 13.0 in stage 5.0 (TID 70) (83.212.81.9, executor 1, partition 13, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 12.0 in stage 5.0 (TID 71) (83.212.80.243, executor 0, partition 12, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 15.0 in stage 5.0 (TID 72) (83.212.81.9, executor 1, partition 15, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO TaskSetManager: Starting task 14.0 in stage 5.0 (TID 73) (83.212.80.243, executor 0, partition 14, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:40 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 83.212.80.243:37105 (size: 14.2 KiB, free: 56.8 MiB)
+23/01/06 16:46:41 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 83.212.81.9:36005 (size: 14.2 KiB, free: 434.4 MiB)
+23/01/06 16:46:46 INFO TaskSetManager: Starting task 16.0 in stage 5.0 (TID 74) (83.212.80.243, executor 0, partition 16, PROCESS_LOCAL, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:46:46 INFO TaskSetManager: Finished task 12.0 in stage 5.0 (TID 71) in 5825 ms on 83.212.80.243 (executor 0) (1/19)
+23/01/06 16:46:46 INFO TaskSetManager: Starting task 17.0 in stage 5.0 (TID 75) (83.212.80.243, executor 0, partition 17, PROCESS_LOCAL, 5094 bytes) taskResourceAssignments Map()
+23/01/06 16:46:46 INFO TaskSetManager: Finished task 8.0 in stage 5.0 (TID 67) in 5901 ms on 83.212.80.243 (executor 0) (2/19)
+23/01/06 16:46:47 INFO TaskSetManager: Starting task 18.0 in stage 5.0 (TID 76) (83.212.80.243, executor 0, partition 18, PROCESS_LOCAL, 5002 bytes) taskResourceAssignments Map()
+23/01/06 16:46:47 INFO TaskSetManager: Finished task 14.0 in stage 5.0 (TID 73) in 6154 ms on 83.212.80.243 (executor 0) (3/19)
+23/01/06 16:46:47 INFO TaskSetManager: Finished task 10.0 in stage 5.0 (TID 69) in 6296 ms on 83.212.80.243 (executor 0) (4/19)
+23/01/06 16:46:47 INFO TaskSetManager: Finished task 2.0 in stage 5.0 (TID 61) in 6939 ms on 83.212.80.243 (executor 0) (5/19)
+23/01/06 16:46:47 INFO TaskSetManager: Finished task 18.0 in stage 5.0 (TID 76) in 833 ms on 83.212.80.243 (executor 0) (6/19)
+23/01/06 16:46:48 INFO TaskSetManager: Finished task 4.0 in stage 5.0 (TID 63) in 7222 ms on 83.212.80.243 (executor 0) (7/19)
+23/01/06 16:46:48 INFO TaskSetManager: Finished task 6.0 in stage 5.0 (TID 65) in 7495 ms on 83.212.80.243 (executor 0) (8/19)
+23/01/06 16:46:48 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 59) in 8013 ms on 83.212.80.243 (executor 0) (9/19)
+23/01/06 16:46:50 INFO TaskSetManager: Finished task 16.0 in stage 5.0 (TID 74) in 3867 ms on 83.212.80.243 (executor 0) (10/19)
+23/01/06 16:46:51 INFO TaskSetManager: Finished task 17.0 in stage 5.0 (TID 75) in 4692 ms on 83.212.80.243 (executor 0) (11/19)
+23/01/06 16:47:13 INFO TaskSetManager: Finished task 15.0 in stage 5.0 (TID 72) in 32608 ms on 83.212.81.9 (executor 1) (12/19)
+23/01/06 16:47:16 INFO TaskSetManager: Finished task 13.0 in stage 5.0 (TID 70) in 35937 ms on 83.212.81.9 (executor 1) (13/19)
+23/01/06 16:47:17 INFO TaskSetManager: Finished task 11.0 in stage 5.0 (TID 68) in 36055 ms on 83.212.81.9 (executor 1) (14/19)
+23/01/06 16:47:19 INFO TaskSetManager: Finished task 9.0 in stage 5.0 (TID 66) in 38155 ms on 83.212.81.9 (executor 1) (15/19)
+23/01/06 16:47:19 INFO TaskSetManager: Finished task 7.0 in stage 5.0 (TID 64) in 38944 ms on 83.212.81.9 (executor 1) (16/19)
+23/01/06 16:47:21 INFO TaskSetManager: Finished task 5.0 in stage 5.0 (TID 62) in 40585 ms on 83.212.81.9 (executor 1) (17/19)
+23/01/06 16:47:22 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 58) in 41188 ms on 83.212.81.9 (executor 1) (18/19)
+23/01/06 16:47:22 INFO TaskSetManager: Finished task 3.0 in stage 5.0 (TID 60) in 41570 ms on 83.212.81.9 (executor 1) (19/19)
+23/01/06 16:47:22 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+23/01/06 16:47:22 INFO DAGScheduler: ShuffleMapStage 5 (map at FPGrowth.scala:252) finished in 41.587 s
+23/01/06 16:47:22 INFO DAGScheduler: looking for newly runnable stages
+23/01/06 16:47:22 INFO DAGScheduler: running: Set()
+23/01/06 16:47:22 INFO DAGScheduler: waiting: Set(ResultStage 6)
+23/01/06 16:47:22 INFO DAGScheduler: failed: Set()
+23/01/06 16:47:22 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[23] at filter at FPGrowth.scala:254), which has no missing parents
+23/01/06 16:47:22 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 6.0 KiB, free 433.8 MiB)
+23/01/06 16:47:22 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 3.3 KiB, free 433.8 MiB)
+23/01/06 16:47:22 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on master:34483 (size: 3.3 KiB, free: 434.3 MiB)
+23/01/06 16:47:22 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1513
+23/01/06 16:47:22 INFO DAGScheduler: Submitting 19 missing tasks from ResultStage 6 (MapPartitionsRDD[23] at filter at FPGrowth.scala:254) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/01/06 16:47:22 INFO TaskSchedulerImpl: Adding task set 6.0 with 19 tasks resource profile 0
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 77) (83.212.80.243, executor 0, partition 0, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 78) (83.212.81.9, executor 1, partition 1, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 79) (83.212.80.243, executor 0, partition 2, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 3.0 in stage 6.0 (TID 80) (83.212.81.9, executor 1, partition 3, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 4.0 in stage 6.0 (TID 81) (83.212.80.243, executor 0, partition 4, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 5.0 in stage 6.0 (TID 82) (83.212.81.9, executor 1, partition 5, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 6.0 in stage 6.0 (TID 83) (83.212.80.243, executor 0, partition 6, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 7.0 in stage 6.0 (TID 84) (83.212.81.9, executor 1, partition 7, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 8.0 in stage 6.0 (TID 85) (83.212.80.243, executor 0, partition 8, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 9.0 in stage 6.0 (TID 86) (83.212.81.9, executor 1, partition 9, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 10.0 in stage 6.0 (TID 87) (83.212.80.243, executor 0, partition 10, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 11.0 in stage 6.0 (TID 88) (83.212.81.9, executor 1, partition 11, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 12.0 in stage 6.0 (TID 89) (83.212.80.243, executor 0, partition 12, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 13.0 in stage 6.0 (TID 90) (83.212.81.9, executor 1, partition 13, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 14.0 in stage 6.0 (TID 91) (83.212.80.243, executor 0, partition 14, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO TaskSetManager: Starting task 15.0 in stage 6.0 (TID 92) (83.212.81.9, executor 1, partition 15, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:22 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 83.212.80.243:37105 (size: 3.3 KiB, free: 56.7 MiB)
+23/01/06 16:47:22 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 83.212.80.243:55308
+23/01/06 16:47:22 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 83.212.81.9:36005 (size: 3.3 KiB, free: 434.4 MiB)
+23/01/06 16:47:22 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 83.212.81.9:33004
+23/01/06 16:47:23 INFO TaskSetManager: Starting task 16.0 in stage 6.0 (TID 93) (83.212.80.243, executor 0, partition 16, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 12.0 in stage 6.0 (TID 89) in 884 ms on 83.212.80.243 (executor 0) (1/19)
+23/01/06 16:47:23 INFO TaskSetManager: Starting task 17.0 in stage 6.0 (TID 94) (83.212.80.243, executor 0, partition 17, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 14.0 in stage 6.0 (TID 91) in 901 ms on 83.212.80.243 (executor 0) (2/19)
+23/01/06 16:47:23 INFO TaskSetManager: Starting task 18.0 in stage 6.0 (TID 95) (83.212.80.243, executor 0, partition 18, NODE_LOCAL, 4275 bytes) taskResourceAssignments Map()
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 6.0 in stage 6.0 (TID 83) in 913 ms on 83.212.80.243 (executor 0) (3/19)
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 8.0 in stage 6.0 (TID 85) in 914 ms on 83.212.80.243 (executor 0) (4/19)
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 77) in 924 ms on 83.212.80.243 (executor 0) (5/19)
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 4.0 in stage 6.0 (TID 81) in 944 ms on 83.212.80.243 (executor 0) (6/19)
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 79) in 973 ms on 83.212.80.243 (executor 0) (7/19)
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 10.0 in stage 6.0 (TID 87) in 1003 ms on 83.212.80.243 (executor 0) (8/19)
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 17.0 in stage 6.0 (TID 94) in 138 ms on 83.212.80.243 (executor 0) (9/19)
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 16.0 in stage 6.0 (TID 93) in 157 ms on 83.212.80.243 (executor 0) (10/19)
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 18.0 in stage 6.0 (TID 95) in 140 ms on 83.212.80.243 (executor 0) (11/19)
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 7.0 in stage 6.0 (TID 84) in 1351 ms on 83.212.81.9 (executor 1) (12/19)
+23/01/06 16:47:23 INFO TaskSetManager: Finished task 15.0 in stage 6.0 (TID 92) in 1351 ms on 83.212.81.9 (executor 1) (13/19)
+23/01/06 16:47:24 INFO TaskSetManager: Finished task 5.0 in stage 6.0 (TID 82) in 1707 ms on 83.212.81.9 (executor 1) (14/19)
+23/01/06 16:47:24 INFO TaskSetManager: Finished task 11.0 in stage 6.0 (TID 88) in 1704 ms on 83.212.81.9 (executor 1) (15/19)
+23/01/06 16:47:24 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 78) in 1713 ms on 83.212.81.9 (executor 1) (16/19)
+23/01/06 16:47:24 INFO TaskSetManager: Finished task 9.0 in stage 6.0 (TID 86) in 1708 ms on 83.212.81.9 (executor 1) (17/19)
+23/01/06 16:47:24 INFO TaskSetManager: Finished task 13.0 in stage 6.0 (TID 90) in 1706 ms on 83.212.81.9 (executor 1) (18/19)
+23/01/06 16:47:24 INFO TaskSetManager: Finished task 3.0 in stage 6.0 (TID 80) in 1743 ms on 83.212.81.9 (executor 1) (19/19)
+23/01/06 16:47:24 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+23/01/06 16:47:24 INFO DAGScheduler: ResultStage 6 (collect at FPGrowth.scala:254) finished in 1.759 s
+23/01/06 16:47:24 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+23/01/06 16:47:24 INFO TaskSchedulerImpl: Killing all running tasks in stage 6: Stage finished
+23/01/06 16:47:24 INFO DAGScheduler: Job 4 finished: collect at FPGrowth.scala:254, took 43.365303 s
+23/01/06 16:47:24 INFO MapPartitionsRDD: Removing RDD 19 from persistence list
+23/01/06 16:47:24 INFO BlockManager: Removing RDD 19
+23/01/06 16:47:24 INFO Instrumentation: [a0f8d2ab] training finished
+23/01/06 16:47:24 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+23/01/06 16:47:24 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+23/01/06 16:47:24 INFO SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+23/01/06 16:47:24 INFO CodeGenerator: Code generated in 16.662404 ms
+23/01/06 16:47:24 INFO SparkContext: Starting job: save at NativeMethodAccessorImpl.java:0
+23/01/06 16:47:24 INFO DAGScheduler: Registering RDD 24 (flatMap at FPGrowth.scala:273) as input to shuffle 2
+23/01/06 16:47:24 INFO DAGScheduler: Got job 5 (save at NativeMethodAccessorImpl.java:0) with 1 output partitions
+23/01/06 16:47:24 INFO DAGScheduler: Final stage: ResultStage 8 (save at NativeMethodAccessorImpl.java:0)
+23/01/06 16:47:24 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 7)
+23/01/06 16:47:24 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 7)
+23/01/06 16:47:24 INFO DAGScheduler: Submitting ShuffleMapStage 7 (MapPartitionsRDD[24] at flatMap at FPGrowth.scala:273), which has no missing parents
+23/01/06 16:47:24 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 33.2 KiB, free 433.8 MiB)
+23/01/06 16:47:24 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 15.6 KiB, free 433.8 MiB)
+23/01/06 16:47:24 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on master:34483 (size: 15.6 KiB, free: 434.3 MiB)
+23/01/06 16:47:24 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1513
+23/01/06 16:47:24 INFO DAGScheduler: Submitting 19 missing tasks from ShuffleMapStage 7 (MapPartitionsRDD[24] at flatMap at FPGrowth.scala:273) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+23/01/06 16:47:24 INFO TaskSchedulerImpl: Adding task set 7.0 with 19 tasks resource profile 0
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 96) (83.212.80.243, executor 0, partition 0, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 97) (83.212.81.9, executor 1, partition 1, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 2.0 in stage 7.0 (TID 98) (83.212.80.243, executor 0, partition 2, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 3.0 in stage 7.0 (TID 99) (83.212.81.9, executor 1, partition 3, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 4.0 in stage 7.0 (TID 100) (83.212.80.243, executor 0, partition 4, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 5.0 in stage 7.0 (TID 101) (83.212.81.9, executor 1, partition 5, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 6.0 in stage 7.0 (TID 102) (83.212.80.243, executor 0, partition 6, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 7.0 in stage 7.0 (TID 103) (83.212.81.9, executor 1, partition 7, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 8.0 in stage 7.0 (TID 104) (83.212.80.243, executor 0, partition 8, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 9.0 in stage 7.0 (TID 105) (83.212.81.9, executor 1, partition 9, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 10.0 in stage 7.0 (TID 106) (83.212.80.243, executor 0, partition 10, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 11.0 in stage 7.0 (TID 107) (83.212.81.9, executor 1, partition 11, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 12.0 in stage 7.0 (TID 108) (83.212.80.243, executor 0, partition 12, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 13.0 in stage 7.0 (TID 109) (83.212.81.9, executor 1, partition 13, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 14.0 in stage 7.0 (TID 110) (83.212.80.243, executor 0, partition 14, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO TaskSetManager: Starting task 15.0 in stage 7.0 (TID 111) (83.212.81.9, executor 1, partition 15, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:24 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on 83.212.80.243:37105 (size: 15.6 KiB, free: 434.4 MiB)
+23/01/06 16:47:24 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on 83.212.81.9:36005 (size: 15.6 KiB, free: 434.4 MiB)
+23/01/06 16:47:31 INFO TaskSetManager: Starting task 16.0 in stage 7.0 (TID 112) (83.212.80.243, executor 0, partition 16, ANY, 4910 bytes) taskResourceAssignments Map()
+23/01/06 16:47:31 INFO TaskSetManager: Finished task 14.0 in stage 7.0 (TID 110) in 6460 ms on 83.212.80.243 (executor 0) (1/19)
+23/01/06 16:47:32 INFO TaskSetManager: Starting task 17.0 in stage 7.0 (TID 113) (83.212.80.243, executor 0, partition 17, ANY, 5094 bytes) taskResourceAssignments Map()
+23/01/06 16:47:32 INFO TaskSetManager: Finished task 12.0 in stage 7.0 (TID 108) in 7418 ms on 83.212.80.243 (executor 0) (2/19)
+23/01/06 16:47:32 INFO TaskSetManager: Starting task 18.0 in stage 7.0 (TID 114) (83.212.80.243, executor 0, partition 18, ANY, 5002 bytes) taskResourceAssignments Map()
+23/01/06 16:47:32 INFO TaskSetManager: Finished task 10.0 in stage 7.0 (TID 106) in 7445 ms on 83.212.80.243 (executor 0) (3/19)
+23/01/06 16:47:32 INFO TaskSetManager: Finished task 8.0 in stage 7.0 (TID 104) in 7517 ms on 83.212.80.243 (executor 0) (4/19)
+23/01/06 16:47:33 INFO TaskSetManager: Finished task 18.0 in stage 7.0 (TID 114) in 1293 ms on 83.212.80.243 (executor 0) (5/19)
+23/01/06 16:47:33 INFO TaskSetManager: Finished task 4.0 in stage 7.0 (TID 100) in 9033 ms on 83.212.80.243 (executor 0) (6/19)
+23/01/06 16:47:33 INFO TaskSetManager: Finished task 6.0 in stage 7.0 (TID 102) in 9263 ms on 83.212.80.243 (executor 0) (7/19)
+23/01/06 16:47:35 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 96) in 10416 ms on 83.212.80.243 (executor 0) (8/19)
+23/01/06 16:47:35 INFO TaskSetManager: Finished task 2.0 in stage 7.0 (TID 98) in 10662 ms on 83.212.80.243 (executor 0) (9/19)
+23/01/06 16:47:36 INFO TaskSetManager: Finished task 16.0 in stage 7.0 (TID 112) in 4861 ms on 83.212.80.243 (executor 0) (10/19)
+23/01/06 16:47:37 INFO TaskSetManager: Finished task 17.0 in stage 7.0 (TID 113) in 5438 ms on 83.212.80.243 (executor 0) (11/19)
+23/01/06 16:47:55 INFO TaskSetManager: Finished task 13.0 in stage 7.0 (TID 109) in 30572 ms on 83.212.81.9 (executor 1) (12/19)
+23/01/06 16:47:59 INFO TaskSetManager: Finished task 11.0 in stage 7.0 (TID 107) in 35287 ms on 83.212.81.9 (executor 1) (13/19)
+23/01/06 16:48:02 INFO TaskSetManager: Finished task 9.0 in stage 7.0 (TID 105) in 37780 ms on 83.212.81.9 (executor 1) (14/19)
+23/01/06 16:48:07 INFO TaskSetManager: Finished task 15.0 in stage 7.0 (TID 111) in 42427 ms on 83.212.81.9 (executor 1) (15/19)
+23/01/06 16:48:14 INFO TaskSetManager: Finished task 3.0 in stage 7.0 (TID 99) in 49614 ms on 83.212.81.9 (executor 1) (16/19)
+23/01/06 16:48:14 INFO TaskSetManager: Finished task 7.0 in stage 7.0 (TID 103) in 49943 ms on 83.212.81.9 (executor 1) (17/19)
+23/01/06 16:48:14 INFO TaskSetManager: Finished task 5.0 in stage 7.0 (TID 101) in 50228 ms on 83.212.81.9 (executor 1) (18/19)
+23/01/06 16:48:15 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 97) in 50627 ms on 83.212.81.9 (executor 1) (19/19)
+23/01/06 16:48:15 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+23/01/06 16:48:15 INFO DAGScheduler: ShuffleMapStage 7 (flatMap at FPGrowth.scala:273) finished in 50.639 s
+23/01/06 16:48:15 INFO DAGScheduler: looking for newly runnable stages
+23/01/06 16:48:15 INFO DAGScheduler: running: Set()
+23/01/06 16:48:15 INFO DAGScheduler: waiting: Set(ResultStage 8)
+23/01/06 16:48:15 INFO DAGScheduler: failed: Set()
+23/01/06 16:48:15 INFO DAGScheduler: Submitting ResultStage 8 (CoalescedRDD[31] at save at NativeMethodAccessorImpl.java:0), which has no missing parents
+23/01/06 16:48:15 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 225.5 KiB, free 433.5 MiB)
+23/01/06 16:48:15 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 82.0 KiB, free 433.5 MiB)
+23/01/06 16:48:15 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on master:34483 (size: 82.0 KiB, free: 434.2 MiB)
+23/01/06 16:48:15 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1513
+23/01/06 16:48:15 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (CoalescedRDD[31] at save at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+23/01/06 16:48:15 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks resource profile 0
+23/01/06 16:48:15 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 115) (83.212.81.9, executor 1, partition 0, NODE_LOCAL, 4875 bytes) taskResourceAssignments Map()
+23/01/06 16:48:15 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on 83.212.81.9:36005 (size: 82.0 KiB, free: 434.3 MiB)
+23/01/06 16:48:15 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 83.212.81.9:33004
+23/01/06 16:48:17 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 115) in 2599 ms on 83.212.81.9 (executor 1) (1/1)
+23/01/06 16:48:17 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+23/01/06 16:48:17 INFO DAGScheduler: ResultStage 8 (save at NativeMethodAccessorImpl.java:0) finished in 2.648 s
+23/01/06 16:48:17 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+23/01/06 16:48:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 8: Stage finished
+23/01/06 16:48:17 INFO DAGScheduler: Job 5 finished: save at NativeMethodAccessorImpl.java:0, took 53.299334 s
+23/01/06 16:48:17 INFO FileFormatWriter: Start to commit write Job 194d576e-6664-4e6f-8557-23561a2916ec.
+23/01/06 16:48:18 INFO FileFormatWriter: Write Job 194d576e-6664-4e6f-8557-23561a2916ec committed. Elapsed time: 82 ms.
+23/01/06 16:48:18 INFO FileFormatWriter: Finished processing stats for write job 194d576e-6664-4e6f-8557-23561a2916ec.
+23/01/06 16:48:18 INFO SparkUI: Stopped Spark web UI at http://master:4040
+23/01/06 16:48:18 INFO StandaloneSchedulerBackend: Shutting down all executors
+23/01/06 16:48:18 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+23/01/06 16:48:18 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+23/01/06 16:48:18 INFO MemoryStore: MemoryStore cleared
+23/01/06 16:48:18 INFO BlockManager: BlockManager stopped
+23/01/06 16:48:18 INFO BlockManagerMaster: BlockManagerMaster stopped
+23/01/06 16:48:18 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+23/01/06 16:48:18 INFO SparkContext: Successfully stopped SparkContext
+23/01/06 16:48:18 INFO ShutdownHookManager: Shutdown hook called
+23/01/06 16:48:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-273f02f5-ef1f-4d55-9cf7-2134a41eaf9a/pyspark-8f84031f-2da8-4757-9f55-811f2e3e0e4b
+23/01/06 16:48:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-d905901e-06a9-43a6-9bc4-2d74c0a20605
+23/01/06 16:48:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-273f02f5-ef1f-4d55-9cf7-2134a41eaf9a

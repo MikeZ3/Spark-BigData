@@ -1,0 +1,6 @@
+~/spark/bin/spark-submit --master spark://master:7077 /home/user/Spark-BigData/fpgrowth_final.py [threshold] [inputFilenameFromDfs] [outputFilenameToDfs]
+
+Π.χ.
+~/spark/bin/spark-submit --master spark://master:7077 /home/user/Spark-BigData/fpgrowth_final.py 10000 data output_10000
+
+Τα αρχεία εισόδου και εξόδου βρίσκονται στο hdfs.
